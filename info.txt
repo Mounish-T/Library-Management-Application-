@@ -1,0 +1,154 @@
+📚 Complete Library Management System – Feature List
+1. User & Role Management
+✅ User Registration & Login (Admin, Librarian, Member)
+
+✅ Profile update (name, email, phone, password)
+
+✅ Role-based permissions (Admin > Librarian > Member)
+
+✅ Password reset (email or OTP-based)
+
+✅ Member account suspension/reactivation
+
+
+-------------------------------------------------
+2. Book & Inventory Management
+✅ Add new book with details (Title, Author, ISBN, Publisher, Year, Edition, Category, Language)
+
+✅ Bulk book upload via CSV/Excel
+
+✅ Update/delete book records
+
+✅ Track total copies vs available copies
+
+✅ Assign unique ID/barcode for each book copy
+
+✅ Categorization & tagging (subject, genre, department)
+
+
+-------------------------------------------------
+
+3. Search & Catalog
+✅ Search by Title, Author, ISBN, Publisher, or Keywords
+
+✅ Advanced filters (category, year, language, availability)
+
+✅ Sort by latest, most issued, alphabetically
+
+✅ Book details page (description, cover image, availability status)
+
+✅ ISBN/barcode scan to fetch book info
+
+
+-------------------------------------------------
+
+4. Borrowing & Returning
+✅ Issue book to a member
+
+✅ Due date setting (based on member type or rules)
+
+✅ Renew books before due date
+
+✅ Return book (update availability)
+
+✅ Overdue handling (auto fine calculation)
+
+✅ Limit on number of books per member
+
+
+
+-------------------------------------------------
+
+5. Reservation & Hold
+✅ Reserve books currently unavailable
+
+✅ Cancel reservations
+
+✅ Auto notify when reserved book is available
+
+✅ Reservation expiry if not collected in time
+
+
+
+-------------------------------------------------
+
+6. Fine & Payment Management
+✅ Auto calculate fines for overdue books
+
+✅ Adjustable fine rates
+
+✅ Fine payment tracking
+
+✅ Online payment integration (UPI, cards, PayPal, etc.)
+
+✅ Fine reports (paid, pending, overdue)
+
+
+
+-------------------------------------------------
+
+7. Notifications & Alerts
+✅ Due date reminder (email/SMS/app push)
+
+✅ Overdue notice
+
+✅ Reservation ready notice
+
+✅ New book arrival alert
+
+✅ Event/announcement notifications
+
+
+
+
+-------------------------------------------------
+
+8. Reports & Analytics
+✅ Books issued per day/week/month
+
+✅ Most borrowed books
+
+✅ Overdue books list
+
+✅ Member borrowing history
+
+✅ Inventory stock report
+
+✅ Category-wise usage statistics
+
+✅ Fine collection report
+
+
+
+-------------------------------------------------
+
+9. Security & Backup
+✅ Secure authentication (JWT/OAuth)
+
+✅ Password hashing
+
+✅ Role-based access control
+
+✅ Daily/weekly database backup
+
+✅ Restore from backup
+
+
+
+-------------------------------------------------
+
+10. Advanced Features (Optional)
+✅ Barcode/QR code scanning for quick issue/return
+
+✅ RFID book tracking
+
+✅ AI-powered book recommendations (based on borrowing history)
+
+✅ Multi-branch library support
+
+✅ Offline mode for librarians (sync when online)
+
+✅ Voice search for books
+
+✅ E-book integration (download/online reading)
+
