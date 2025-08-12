@@ -9,16 +9,18 @@ div{
 }
 
 body{
-    background-color: aqua;
-    /* background-image: url("image.png"); */
-    fill: url("image.png");
+    background-image: url("assets/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .body{
     margin: 10%;
     width: 700px;
     text-align: justify;
     justify-self: center;
     background-color: white;
+    background-color: rgb(254, 254, 111);
 }
 
 p{
@@ -26,10 +28,12 @@ p{
     font-size: 20px;
     font-weight: normal;
     font-style: italic;
+    text-align: center;
 }
 
-.getMail{
+.getMail, .getName, .getPwd{
     padding: 9px;
+    margin: 10px;
     width: 15rem;
     font-style: italic;
     font-size: 15px;
@@ -37,7 +41,7 @@ p{
     display: block;
 }
 
-.getMail:focus{
+.getMail:focus, .getName:focus, .getPwd:focus{
     border-color: skyblue;
     outline: none;
 }
@@ -57,4 +61,8 @@ h4{
     display: flex;
     column-gap: 40px;
     justify-content: space-around;
+}
+
+.input-form{
+    padding: 10px;
 }
