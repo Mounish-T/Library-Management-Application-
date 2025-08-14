@@ -20,7 +20,9 @@ function oldUser(){
     input.innerHTML = `
         <input placeholder="Enter your mail" type="text" class="getMail">
         <div class="signin">
-            <h4 style="background-color: blue;" onclick="signIn()">Sign In</h4>
+            <a href="home/home.html">
+                <h4 style="background-color: blue;" onclick="signIn()">Sign In</h4>
+            </a>
             <h4 style="background-color: green;" onclick="newUser()">New User</h4>
         </div>
     `

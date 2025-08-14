@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("assets/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav{
+    background-color: wheat;
+    /* background-color: rgb(157, 255, 250);; */
+    padding: 20px;
+}
+
+h3{
+    padding: 10px;
+}
+
+.heading, .actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userIcon{
+    margin-top: 10px;
+    font-size: x-large;
+}
+
+span{
+    color: rgb(255, 0, 149);
+}
+
+.body{
+    text-align: center;
+}
+
+.lists{
+    display: flex;
+    justify-content: space-around;
+}
+
+.event1, .event2, .event3{
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.event1{
+    background-color: aqua;
+}
+
+.event2{
+    background-color: rgb(192, 85, 142);
+}
+
+.event3{
+    background-color: chocolate;
+}
+
+.searchBar{
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    border-radius: 50px;
+    margin: 10px;
+    width: 65%;
+}
+
+.search{
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.searchBar:focus-within{
+    border: 3px solid rgb(255, 0, 149);
+}
+
+.filter{
+    font-size: 20px;
+    margin: 10px;
+}
