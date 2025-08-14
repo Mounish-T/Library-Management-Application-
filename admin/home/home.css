@@ -106,8 +106,52 @@ span{
 
 table, td, th{
     padding: 25px;
-    font-size: 15px;
+    font-size: 20px;
     border: 3px solid black;
     border-collapse: collapse;
     background-color: aqua;
+}
+
+#addBook{
+    justify-self: center;
+    margin-top: 20%;
+    background-color: wheat;
+}
+
+.form-content{
+    padding: 20px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+    gap: 10px 20px;
+    align-items: center;
+}
+
+/* label{
+    text-wrap: nowrap;
+} */
+
+.details{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.submit{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: cadetblue;
+}
+
+button:hover{
+    background-color: coral;
+}
+
+button:active{
+    opacity: 0.8;
 }

@@ -7,6 +7,31 @@
     <script src="https://kit.fontawesome.com/aa8d9a6dd9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="home.css">
 </head>
+
+<dialog id="addBook">
+    <form class="form-content">
+        <label for="isbn">ISBN: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="title">Title: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="author">Author Name: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="publisher">Publisher Name: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="year">Year: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="edition">Edition: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="category">Category: </label>
+        <input type="text" name="" id="" class="details" required>
+        <label for="language">Language: </label>
+        <input type="text" name="" id="" class="details" required>
+    </form>
+    <div class="submit">
+        <button type="submit" onclick="document.getElementById('addBook').close()">Add Book</button>
+    </div>
+</dialog>
+
 <body>
     <div class="nav">
         <div class="heading">   
@@ -20,7 +45,7 @@
     <br><br>
 
     <div class="lists">
-        <div class="event1">Add Book</div>
+        <div class="event1" onclick="document.getElementById('addBook').showModal()">Add Book</div>
         <div class="event2">Upload books by Excel</div>
         <div class="event3">Delete Book</div>
     </div>
