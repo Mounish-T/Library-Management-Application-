@@ -19,8 +19,8 @@ body{
     width: 700px;
     text-align: justify;
     justify-self: center;
-    background-color: white;
-    background-color: rgb(157, 255, 250);
+    background-color: wheat;
+    /* background-color: rgb(157, 255, 250); */
 }
 
 p{
