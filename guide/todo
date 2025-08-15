@@ -1,0 +1,105 @@
+👑 Admin
+
+Manage All Users
+
+Add, update, or delete librarians and members.
+
+Example: Create a new librarian account with name, email, phone, and password.
+
+Validation: Email must be unique, password must be at least 8 characters.
+
+Add New User (Admin/Librarian/Member)
+
+Assign role during creation.
+
+Example: Add a member with “Member” role so they can borrow books.
+
+Validation: Role field cannot be empty, contact number must be valid.
+
+Manage Book Inventory
+
+Add, edit, delete books, update stock.
+
+Example: Add "Harry Potter" with ISBN, author, and 5 copies.
+
+Validation: ISBN must be unique, copies must be a positive number.
+
+View & Generate Reports
+
+Check borrowing trends, fines, overdue books.
+
+Example: Generate monthly report showing top 10 borrowed books.
+
+System Settings & Backup
+
+Manage system configurations and perform backups.
+
+Example: Change fine rate from ₹2/day to ₹5/day.
+
+📚 Librarian
+
+Issue Books
+
+Assign books to members with due date.
+
+Example: Issue "Data Structures" to Member ID 102 for 14 days.
+
+Validation: Member must not exceed borrowing limit; book must be available.
+
+Return Books
+
+Mark books as returned and update stock.
+
+Example: Return "Machine Learning Basics" and remove overdue fine if within due date.
+
+Renew Books
+
+Extend due date if book is not reserved by another member.
+
+Example: Extend "Python Programming" by 7 days.
+
+Manage Reservations
+
+Approve/cancel reservations and notify members.
+
+Example: Notify Member ID 205 that "The Alchemist" is now available.
+
+Collect & Manage Fines
+
+Calculate overdue charges and record payments.
+
+Example: Charge ₹20 fine for 4 days late return.
+
+👤 Member
+
+Search & View Books
+
+Search by title, author, ISBN, or category.
+
+Example: Search for "Database Systems" and see availability.
+
+Borrow Books
+
+Request books from the library.
+
+Example: Borrow "Clean Code" for 14 days.
+
+Validation: Cannot borrow more than allowed limit (e.g., 3 books at a time).
+
+Reserve Books
+
+Hold a book that’s currently borrowed by someone else.
+
+Example: Reserve "Deep Learning" and get notified when available.
+
+Renew Books
+
+Extend due date before it expires.
+
+Example: Renew "C Programming" for another week.
+
+View Borrowing History & Fines
+
+Check past borrowed books and any pending fines.
+
+Example: See all books borrowed in the last 6 months with return dates.
