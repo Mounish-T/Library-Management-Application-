@@ -71,6 +71,7 @@ span{
     color: white;
     border-radius: 25px;
     cursor: pointer;
+    font-size: large;
 }
 
 #librarians:hover, #members:hover, #books:hover, #reports:hover, #fines:hover{
