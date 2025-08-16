@@ -9,20 +9,26 @@
 <body>
     <div class="body">
         <div>
-            <h1>Library Management System</h1>
+            <h1 class="Intro">Library Management System</h1>
             <br><br>
-            <p>Welcome to the Library Management System. Here you can manage your library's books, members, and transactions.</p>
+            <p class="Intro">Welcome to the Library Management System. Here you can manage your library's books, members, and transactions.</p>
         </div>
         <div id="input-details">
             <input placeholder="Enter your mail" type="text" class="getMail">
+            <small class="error-msg" style="color: red; display: none;"></small>
+
             <div class="signin">
-                <a href="admin/home/home.html">
-                    <h4 style="background-color: blue;" onclick="">Sign In</h4>
-                </a>
-                <h4 style="background-color: green;" onclick="newUser()">New User</h4>
+                    <h4 style="background-color: blue;" onclick="oldUser()">Sign In</h4>
+                
+                <h4  style="background-color: green;" onclick="newUser()">New User</h4>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
+
+<small class="error-name"></small>
+<small class="error-mail"></small>
+<small class="error-pass"></small>
