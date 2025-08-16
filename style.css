@@ -20,6 +20,8 @@ body{
     text-align: justify;
     justify-self: center;
     background-color: wheat;
+    opacity: 0.8;
+    border-radius: 15px;
     /* background-color: rgb(157, 255, 250); */
 }
 
@@ -31,7 +33,7 @@ p{
     text-align: center;
 }
 
-.getMail, .getName, .getPwd{
+.getMail, .getName, .getPwd,.getPwd1{
     padding: 9px;
     margin: 10px;
     width: 15rem;
@@ -39,11 +41,13 @@ p{
     font-size: 15px;
     border: 2px solid green;
     display: block;
+    border-radius: 10px;
 }
 
 .getMail:focus, .getName:focus, .getPwd:focus{
     border-color: skyblue;
     outline: none;
+    box-shadow: 0 0 4px skyblue;
 }
 
 a{
@@ -69,4 +73,27 @@ h4{
 
 .input-form{
     padding: 10px;
+}
+h4:hover{
+opacity: 0.7;
+}
+h4:active{
+    opacity: 0.5;
+
+}
+.Intro:hover{
+color: rgb(32, 4, 60);
+
+}
+.error-input{
+    border-color: red !important;
+    padding: 9px;
+    margin: 10px;
+    width: 15rem;
+    font-style: italic;
+    font-size: 15px;
+    border: 2px solid;
+    display: block;
+    border-radius: 10px;
+    
 }
