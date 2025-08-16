@@ -32,6 +32,16 @@
     </div>
 </dialog>
 
+<dialog id="addBooksByExcel">
+    <div class="inputFile">
+        <input id="file" type="file">
+    </div>
+    <div class="UploadButtons">
+        <button id="upload">Upload</button>
+        <button id="cancel" onclick="document.getElementById('addBooksByExcel').close()">Cancel</button>
+    </div>
+</dialog>
+
 <body>
     <div class="nav">
         <div class="heading">   
@@ -45,9 +55,14 @@
     <br><br>
 
     <div class="lists">
-        <div class="event1" onclick="document.getElementById('addBook').showModal()">Add Book</div>
-        <div class="event2">Upload books by Excel</div>
-        <div class="event3">Delete Book</div>
+        <!-- <div class="event1" onclick="document.getElementById('addBook').showModal()">Add Book</div>
+        <div class="event2" onclick="document.getElementById('addBooksByExcel').showModal()">Upload books by Excel</div>
+        <div class="event3">Delete Book</div> -->
+        <div class="nav-btn" id="librarians">Manage Librarians</div>
+        <div class="nav-btn" id="members">Manage Members</div>
+        <div class="nav-btn" id="books">Manage Books</div>
+        <div class="nav-btn" id="reports">View & Generate Reports</div>
+        <div class="nav-btn" id="fines">Change fine rate</div>
     </div>
 
     <br><br>
