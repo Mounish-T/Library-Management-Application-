@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("assets/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav{
+    background-color: wheat;
+    /* background-color: rgb(157, 255, 250); */
+    padding: 20px;
+}
+
+h3{
+    padding: 10px;
+}
+
+.heading, .actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userIcon{
+    margin-top: 10px;
+    font-size: x-large;
+}
+
+span{
+    color: rgb(255, 0, 149);
+}
+
+.searchBar{
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    border-radius: 50px;
+    margin: 10px;
+    width: 65%;
+}
+
+.search{
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.searchBar:focus-within{
+    border: 3px solid rgb(255, 0, 149);
+}
+
+.filter{
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* .displayLibrarians{
+    justify-items: center;
+    padding: 25px;
+} */
+
+.managelib{
+    background-color: darkkhaki;
+    display: flex;
+    justify-content: space-between;
+    /* color: rgb(255, 4, 4); */
+    padding: 1px;
+}
+
+.managelib h2{
+    color: rgb(255, 4, 4);
+    padding: 10px;
+}
+
+.add, .edit, .delete{
+    margin: 5px 9px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+}
+
+.add:hover, .edit:hover, .delete:hover{
+    transform: scale(1.2);
+    border-color: cadetblue;
+    background-color: chocolate;
+}
+
+.add:active, .edit:active, .delete:active{
+    opacity: 0.6;
+}
+
+.displayLibrarians{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px;
+    justify-content: space-around;
+}
+
+.container{
+    border-radius: 20px;
+    background-color: lightblue;
+    transition: transform 0.3s ease;
+}
+
+.container span{
+    color: blue;
+    /* padding: 0; */
+}
+
+.container:hover{
+    transform: scale(1.1);
+}
+
+table, td, th{
+    padding: 25px;
+    font-size: 20px;
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: aqua;
+}

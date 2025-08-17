@@ -74,6 +74,10 @@ span{
     font-size: large;
 }
 
+a{
+    text-decoration: none;
+}
+
 #librarians:hover, #members:hover, #books:hover, #reports:hover, #fines:hover{
     background-color: cadetblue;
 }
