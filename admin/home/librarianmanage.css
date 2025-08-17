@@ -116,11 +116,26 @@ span{
 
 #form-content *{
     padding: 5px;
-    margin: 5px;
+    /* margin: 5px; */
+}
+
+#form-content small{
+    display: none;
+    /* margin-top: 20px; */
 }
 
 #form-content input{
-    padding: 10px;
+    /* padding: 10px; */
+    font-style: italic;
+    display: block;
+}
+
+#form-content .gender input{
+    display: inline;
+}
+
+#gendermsg{
+    display: block;
 }
 
 .submit{
@@ -130,7 +145,7 @@ span{
 }
 
 #addLibButton, #cancel{
-    background-color: coral;
+    /* background-color: coral; */
     padding: 10px;
     border-radius: 25px;
     font-size: 15px;
@@ -138,7 +153,7 @@ span{
 }
 
 #addLibButton{
-    background-color: darksalmon;
+    background-color: greenyellow;
 }
 
 #cancel{
