@@ -7,6 +7,30 @@
     <script src="https://kit.fontawesome.com/aa8d9a6dd9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="librarianmanage.css">
 </head>
+
+<dialog id="addLib">
+    <form action="" id="form-content">
+        <label for="username">Username: </label>
+        <input type="text">
+        <label for="username">Email: </label>
+        <input type="email">
+        <label for="password">Password: </label>
+        <input type="text">
+        <label for="gender">Gender: </label>
+        <div>
+            <input type="radio" name="" id="">
+            <label for="male">Male</label>
+            <input type="radio" name="" id="">
+            <label for="female">Female</label>
+        </div>
+        <label for="contact">Contact: </label>
+        <input type="">
+    </form>
+    <div class="submit">
+        <button id="cancel" onclick="document.getElementById('addLib').close()">Cancel</button>
+        <button id="addLibButton">Add Librarian</button>
+    </div>
+</dialog>
 <body>
     <div class="nav">
         <div class="heading">   
@@ -20,8 +44,8 @@
     <div class="managelib">
         <h2>Available Librarians</h2>
         <div class="managebtns">
-            <i class="fa-solid fa-add add"></i>
-            <i class="fa-solid fa-pen edit"></i>
+            <i class="fa-solid fa-add add" onclick="document.getElementById('addLib').showModal()"></i>
+            <i class="fa-solid fa-pen edit" onclick="document.getElementById('addLib').showModal()"></i>
             <i class="fa-solid fa-trash delete"></i>
         </div>
     </div>

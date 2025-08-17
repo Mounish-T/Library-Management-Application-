@@ -100,6 +100,58 @@ span{
     opacity: 0.6;
 }
 
+#addLib{
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+    background-color: wheat;
+
+}
+
+#form-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#form-content *{
+    padding: 5px;
+    margin: 5px;
+}
+
+#form-content input{
+    padding: 10px;
+}
+
+.submit{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#addLibButton, #cancel{
+    background-color: coral;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#addLibButton{
+    background-color: darksalmon;
+}
+
+#cancel{
+    background-color: orange;
+}
+
+#addLibButton:hover, #cancel:hover{
+    background-color: mediumorchid;
+}
+
+#addLibButton:active, #cancel:active{
+    opacity: 0.8;
+}
+
 .displayLibrarians{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
