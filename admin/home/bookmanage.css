@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url("assets/download.jpg");
+    background-image: url("../assets/download.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -32,6 +32,7 @@ h3{
 span{
     color: rgb(255, 0, 149);
 }
+
 .managelib{
     background-color: darkkhaki;
     display: flex;

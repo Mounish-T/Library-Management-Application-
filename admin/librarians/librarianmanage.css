@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url("assets/download.jpg");
+    background-image: url("../assets/download.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -101,7 +101,7 @@ span{
     opacity: 0.6;
 }
 
-#addLib{
+#addLib, #delLib{
     align-self: center;
     justify-self: center;
     padding: 20px;
@@ -144,7 +144,7 @@ span{
     justify-content: space-evenly;
 }
 
-#addLibButton, #cancel{
+#addLibButton, #cancel, #delLibButton{
     /* background-color: coral; */
     padding: 10px;
     border-radius: 25px;
@@ -152,7 +152,7 @@ span{
     cursor: pointer;
 }
 
-#addLibButton{
+#addLibButton, #delLibButton{
     background-color: greenyellow;
 }
 
@@ -160,15 +160,28 @@ span{
     background-color: orange;
 }
 
-#addLibButton:hover, #cancel:hover{
+#addLibButton:hover, #cancel:hover, #delLibButton:hover{
     background-color: mediumorchid;
 }
 
-#addLibButton:active, #cancel:active{
+#addLibButton:active, #cancel:active, #delLibButton:active{
     opacity: 0.8;
 }
 
-.displayLibrarians{
+.resBtn{
+    padding: 10px;
+}
+
+#delLib h3{
+    font-size: 20px;
+}
+
+#delLib .resBtn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.displayLibrarians  {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -177,6 +190,7 @@ span{
 }
 
 .container{
+    position: relative;
     border-radius: 20px;
     background-color: lightblue;
     transition: transform 0.3s ease;
@@ -189,6 +203,15 @@ span{
 
 .container:hover{
     transform: scale(1.1);
+}
+
+.selectOne {
+    position: relative;
+    top: 10px;
+    left: 2px;
+    /* display: none; */
+    transform: scale(1.8);
+    cursor: pointer;
 }
 
 table, td, th{
