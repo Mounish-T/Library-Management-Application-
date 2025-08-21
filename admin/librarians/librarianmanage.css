@@ -127,6 +127,8 @@ span{
 #form-content input{
     /* padding: 10px; */
     font-style: italic;
+    border: 2px solid;
+    border-radius: 10px;
     display: block;
 }
 
@@ -134,8 +136,9 @@ span{
     display: inline;
 }
 
-#gendermsg{
-    display: block;
+#username, #email, #pass, #gender, #contact{
+    display: none;
+    color: red;
 }
 
 .submit{
@@ -212,6 +215,11 @@ span{
     /* display: none; */
     transform: scale(1.8);
     cursor: pointer;
+}
+
+.error-input{
+    border: 2px solid red !important;
+    border-radius: 10px !important;
 }
 
 table, td, th{

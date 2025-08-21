@@ -61,6 +61,7 @@ function newUser() {
         inpvar.innerHTML=`
             <div id="input-details">
                 <input placeholder="Enter your mail" type="text" class="getMail">
+                <small class="error-msg" style="color: red; display: none;"></small>
                 <div class="signin">
                         <h4 style="background-color: blue;" onclick="oldUser()">Sign In</h4>
                     

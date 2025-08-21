@@ -9,39 +9,39 @@
 </head>
 
 <dialog id="addLib">
-    <form action="" id="form-content">
+    <form action="" method="cancelAddLib()" id="form-content">
         <label for="username">Username: </label>
         <div>
-            <input type="text">
-            <small>Username can't be Empty</small>
+            <input type="text" class="form-input" name="username">
+            <small id="username">Username can't be Empty</small>
         </div>
         <label for="username">Email: </label>
         <div>
-            <input type="email">
-            <small>Email can't be Empty</small>
+            <input type="email" class="form-input" name="email">
+            <small id="email">Email can't be Empty</small>
         </div>
         <label for="password">Password: </label>
         <div>
-            <input type="text" value="Welcome@123" disabled>
-            <small>Password can't be Empty</small>
+            <input type="text" value="Welcome@123" class="form-input" name="pass" id="password" disabled>
+            <small id="pass">Password can't be Empty</small>
         </div>
         <label for="gender">Gender: </label>
         <div class="gender">
-            <input type="radio" name="gender" class="male" value="male">
-            <label for="male" id="mal">Male</label>
-            <input type="radio" name="gender" id="female" value="female">
+            <input type="radio" name="gender" id="male" class="form-input" value="male">
+            <label for="male" id="">Male</label>
+            <input type="radio" name="gender" id="female" class="form-input" value="female">
             <label for="female">Female</label>
-            <small id="gendermsg">Gender can't be Empty</small>
+            <small id="gender">Gender can't be Empty</small>
         </div>
         <label for="contact">Contact: </label>
         <div>
-            <input type="text">
-            <small>Contact can't be Empty</small>
+            <input type="text" class="form-input" name="contact">
+            <small id="contact">Contact can't be Empty</small>
         </div>
     </form>
     <div class="submit">
-        <button id="cancel" onclick="cancelAddLib()">Cancel</button>
-        <button id="addLibButton">Add Librarian</button>
+        <button id="cancel" onclick="cancelAddLib(false)">Cancel</button>
+        <button id="addLibButton" onclick="addLibrarian()">Add Librarian</button>
     </div>
 </dialog>
 
@@ -68,7 +68,7 @@
     <div class="managelib">
         <h2>Available Librarians</h2>
         <div class="managebtns">
-            <i class="fa-solid fa-add add" onclick="document.getElementById('addLib').showModal()"></i>
+            <i class="fa-solid fa-add add" onclick="cancelAddLib(true)"></i>
             <i class="fa-solid fa-pen edit" onclick="document.getElementById('addLib').showModal()"></i>
             <i class="fa-solid fa-trash delete" onclick="document.getElementById('delLib').showModal()"></i>
         </div>
@@ -210,7 +210,7 @@
             <input type="radio" name="select" class="selectOne">
             <h3><span>id: </span>1</h3>
             <h3><span>Name: </span>Mounish T</h3>
-            <h3><span>Gender: </span>Male</h3>
+            <h3><span>Gender: </span>female</h3>
             <h3><span>Email: </span>mounish@gmail.com</h3>
             <h3><span>Contact: </span>9876541236</h3>
         </div>
