@@ -23,7 +23,7 @@
         <div class="managebtns">
             <i class="fa-solid fa-add add"></i>
             <i class="fa-solid fa-pen edit"></i>
-            <i class="fa-solid fa-trash delete"></i>
+            <i class="fa-solid fa-trash delete" onclick="del()"></i>
         </div>
     </div>
     <br>
@@ -33,9 +33,10 @@
             <i class="fa fa-filter filter"></i>
         </span>
     </div>
-    <div class="displayLibrarians">
+    <div class="displayBooks">
         <table class="displayTable">
             <tr>
+                <th class="disdel" style="display: none;">Select</th>
                 <th>ISBN</th>
                 <th>Title</th>
                 <th>Author</th>
@@ -48,6 +49,7 @@
                 <th>Available Copies</th>
             </tr>
             <tr>
+                <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -60,6 +62,7 @@
                 <td>3</td>
             </tr>
             <tr>
+               <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -72,6 +75,7 @@
                 <td>3</td>
             </tr>
             <tr>
+               <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -84,6 +88,7 @@
                 <td>3</td>
             </tr>
             <tr>
+                <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -96,6 +101,7 @@
                 <td>3</td>
             </tr>
             <tr>
+              <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -108,6 +114,7 @@
                 <td>3</td>
             </tr>
             <tr>
+              <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -120,6 +127,7 @@
                 <td>3</td>
             </tr>
             <tr>
+           <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -132,6 +140,7 @@
                 <td>3</td>
             </tr>
             <tr>
+               <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -144,6 +153,7 @@
                 <td>3</td>
             </tr>
             <tr>
+                <td class="disdel" style="display:none;"><input type="checkbox"></td>
                 <td>1234</td>
                 <td>Applied Electronics</td>
                 <td>Samuel Edison</td>
@@ -157,6 +167,6 @@
             </tr>
         </table>
     </div>
-    <br><br>
+    <script src="bookmanager.js"></script>
 </body>
 </html>

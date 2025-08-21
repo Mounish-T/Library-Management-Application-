@@ -94,7 +94,7 @@ span{
     font-size: 20px;
     margin: 10px;
 }
-.displayLibrarians{
+.displayBooks{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -126,3 +126,11 @@ table, td, th{
     border-collapse: collapse;
     background-color: aqua;
 }
+
+input[type="checkbox"] {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+
