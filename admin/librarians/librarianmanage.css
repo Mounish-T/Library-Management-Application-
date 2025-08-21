@@ -70,7 +70,7 @@ span{
     padding: 25px;
 } */
 
-.managelib{
+.managelib1{
     background-color: darkkhaki;
     display: flex;
     justify-content: space-between;
@@ -78,10 +78,11 @@ span{
     padding: 1px;
 }
 
-.managelib h2{
+.managelib1 h2{
     color: rgb(255, 4, 4);
     padding: 10px;
 }
+
 
 .add, .edit, .delete{
     margin: 5px 9px;
@@ -106,7 +107,56 @@ span{
     justify-self: center;
     padding: 20px;
     background-color: wheat;
+}
 
+.managelib2{
+    display: none;
+    justify-content: space-between;
+    background-color: darkkhaki;
+    padding: 1px;
+}
+
+.managelib2 p{
+    display: inline;
+}
+
+.arrow-back{
+    margin: 10px 10px 10px 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: hotpink;
+}
+
+.arrow-back:hover{
+    background-color: darkgray;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.arrow-back:active{
+    opacity: 0.8;
+}
+
+#editbtn{
+    margin: 10px 10px 10px 0px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: rgb(232, 178, 52);
+}
+
+#editbtn:hover{
+    transform: scale(1.1);
+    /* border-color: cadetblue; */
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+#editbtn:active{
+    opacity: 0.8;
 }
 
 #form-content{
@@ -212,9 +262,8 @@ span{
     position: relative;
     top: 10px;
     left: 2px;
-    /* display: none; */
+    display: none;
     transform: scale(1.8);
-    cursor: pointer;
 }
 
 .error-input{

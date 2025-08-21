@@ -46,8 +46,9 @@ function addLibrarian(){
             }
             isSecond = true;
         }
-        else if(content.value == ""){
+        else if(content.value.trim() == ""){
             isValid = false;
+            content.value = "";
             content.classList.add('error-input');
             var name = document.getElementById(content.name);
             name.style.display = 'block';
@@ -128,4 +129,59 @@ function addLibrarian(){
     }
     console.log(res);
     addLib.close();
+}
+
+function editLibrarian(){
+    let container = document.getElementsByClassName('container');
+    let selectRadio = document.getElementsByClassName('selectOne');
+    for(let idx = 0; idx < container.length; idx++){
+        let eachContainer = container[idx];
+        eachContainer.style.cursor = 'pointer';
+        eachContainer.style.transition = 'none';
+        eachContainer.addEventListener('mouseover', ()=>{
+            eachContainer.style.transform = 'scale(1.0)';
+        });
+        eachContainer.addEventListener('click', ()=>{
+            selectRadio[idx].checked = true;
+        })
+    }
+    
+    for(let eachRadio of selectRadio){
+        eachRadio.style.cursor = 'pointer';
+        eachRadio.style.display = 'block';
+    }
+    let disableCurrentOptions = document.getElementsByClassName('managelib1');
+    disableCurrentOptions[0].style.display = 'none';
+    
+    let enableNewOptions = document.getElementsByClassName('managelib2');
+    enableNewOptions[0].style.display = 'flex';
+
+    let clickEdit = document.getElementById('editbtn');
+    clickEdit.addEventListener('click', ()=>{
+        addElement.showModal();
+    });
+}
+
+function editBack(){
+    let container = document.getElementsByClassName('container');
+    let selectRadio = document.getElementsByClassName('selectOne');
+    for(let eachContainer of container){
+        eachContainer.style.cursor = '';
+        eachContainer.style.transition = 'transform 0.3s ease';
+        eachContainer.addEventListener('mouseover', ()=>{
+            eachContainer.style.transform = 'scale(1.1)';
+        });
+        eachContainer.addEventListener('mouseout', ()=>{
+            eachContainer.style.transform = 'scale(1.0)';
+        });
+    }
+    for(let eachRadio of selectRadio){
+        eachRadio.style.display = 'none';
+        eachRadio.checked = false;
+    }
+    let disableCurrentOptions = document.getElementsByClassName('managelib2');
+    disableCurrentOptions[0].style.display = 'none';
+    
+    let enableNewOptions = document.getElementsByClassName('managelib1');
+    enableNewOptions[0].style.display = 'flex';
 }
