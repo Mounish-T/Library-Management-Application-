@@ -7,4 +7,3 @@ disdel.forEach(el => {
 });
 
 }
-

@@ -119,7 +119,7 @@ span{
     transform: scale(1.1);
 }
 
-table, td, th{
+table, td, th, tr{
     padding: 25px;
     font-size: 20px;
     border: 3px solid black;
@@ -130,7 +130,9 @@ table, td, th{
 input[type="checkbox"] {
   outline: none;
   cursor: pointer;
-  border: none;
+  /* border: none; */
 }
 
-
+.disdel{
+    border: none;
+}
