@@ -49,7 +49,7 @@
     <div>
         <h3>Do you want to delete the Librarian <span>Mounish T</span></h3>
         <div class="resBtn">
-            <button id="cancel" onclick="document.getElementById('delLib').close()">Cancel</button>
+            <button id="cancel" onclick="cancelAddLib()">Cancel</button>
             <button id="delLibButton">Delete Librarian</button>
         </div>
     </div>
@@ -72,15 +72,23 @@
             <!-- <i class="fa-solid fa-add add" onclick="cancelAddLib(true)"></i> -->
             <i class="fa-solid fa-add add" onclick="document.getElementById('libInfo').showModal()"></i>
             <i class="fa-solid fa-pen edit" onclick="selectToEditLibrarian()"></i>
-            <i class="fa-solid fa-trash delete" onclick="document.getElementById('delLib').showModal()"></i>
+            <i class="fa-solid fa-trash delete" onclick="selectToDeleteLibrarian()"></i>
         </div>
     </div>
     <div class="managelib2">
-        <div class="arrow-back" onclick="editBack()">
+        <div class="arrow-back" onclick="editOrDeleteBack()">
             <i class="fa-solid fa-arrow-left back"></i>
             <p>Back</p>
         </div>
         <button id="editbtn" onclick="editLibrarian()">Edit</button>
+    </div>
+
+    <div class="managelib3">
+        <div class="arrow-back" onclick="editOrDeleteBack()">
+            <i class="fa-solid fa-arrow-left back"></i>
+            <p>Back</p>
+        </div>
+        <button id="deletebtn" onclick="deleteLibrarian()">Delete</button>
     </div>
 
     <br>

@@ -109,14 +109,14 @@ span{
     background-color: wheat;
 }
 
-.managelib2{
+.managelib2, .managelib3{
     display: none;
     justify-content: space-between;
     background-color: darkkhaki;
     padding: 1px;
 }
 
-.managelib2 p{
+.managelib2 p, .managelib3 p{
     display: inline;
 }
 
@@ -139,7 +139,7 @@ span{
     opacity: 0.8;
 }
 
-#editbtn{
+#editbtn, #deletebtn{
     margin: 10px 10px 10px 0px;
     padding: 5px 10px;
     font-size: 15px;
@@ -148,14 +148,14 @@ span{
     background-color: rgb(232, 178, 52);
 }
 
-#editbtn:hover{
+#editbtn:hover, #deletebtn:hover{
     transform: scale(1.1);
     /* border-color: cadetblue; */
     background-color: darkgrey;
     cursor: pointer;
 }
 
-#editbtn:active{
+#editbtn:active, #deletebtn:active{
     opacity: 0.8;
 }
 

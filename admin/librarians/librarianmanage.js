@@ -5,20 +5,19 @@ dialogForm.addEventListener('keydown', (event)=>{
     // console.log(event);
     if(event.key == 'Enter'){
         event.preventDefault();
-        // console.log("Dad");
         addOrUpdateLibrarian(mode);
-        // editBack();
     }
     else if(event.key == 'Escape'){
         event.preventDefault();
         cancelAddLib();
-        editBack();
+        editOrDeleteBack();
     }
 });
 
 window.addEventListener('keydown', (event)=>{
     if(event.key == 'Escape'){
         cancelAddLib();
+        editOrDeleteBack();
     }
 })
 
@@ -49,9 +48,11 @@ function cancelAddLib(){
     }
     document.getElementById('addOrUpdateLibButton').innerText = 'Add Librarian';
     mode = 'add';
-    let dialoForm = document.getElementsByClassName('form')[0];
-    dialoForm.close();
-    editBack();
+    let dialogForm = document.getElementsByClassName('form')[0];
+    dialogForm.close();
+    let deleteDialog = document.getElementById('delLib');
+    deleteDialog.close();
+    editOrDeleteBack();
 }
 
 function addOrUpdateLibrarian(task){    
@@ -170,7 +171,7 @@ function addOrUpdateLibrarian(task){
         // Logic for update data in db
     }
     cancelAddLib();
-    editBack();
+    editOrDeleteBack();
 }
 
 function selectToEditLibrarian(){
@@ -192,8 +193,10 @@ function selectToEditLibrarian(){
         eachRadio.style.cursor = 'pointer';
         eachRadio.style.display = 'block';
     }
-    let disableCurrentOptions = document.getElementsByClassName('managelib1');
-    disableCurrentOptions[0].style.display = 'none';
+    let disableCurrentOptions1 = document.getElementsByClassName('managelib1');
+    disableCurrentOptions1[0].style.display = 'none';
+    let disableCurrentOptions2 = document.getElementsByClassName('managelib3');
+    disableCurrentOptions2[0].style.display = 'none';
     
     let enableNewOptions = document.getElementsByClassName('managelib2');
     enableNewOptions[0].style.display = 'flex';
@@ -207,11 +210,10 @@ function editLibrarian(){
         // Paste the clicked user data to form by getId 'form-content'
         content.value = 'Hi';
     }
-    // console.log("Hello");
     dialogForm.showModal();
 }
 
-function editBack(){
+function editOrDeleteBack(){
     let container = document.getElementsByClassName('container');
     let selectRadio = document.getElementsByClassName('selectOne');
     for(let eachContainer of container){
@@ -228,9 +230,46 @@ function editBack(){
         eachRadio.style.display = 'none';
         eachRadio.checked = false;
     }
-    let disableCurrentOptions = document.getElementsByClassName('managelib2');
-    disableCurrentOptions[0].style.display = 'none';
+    let disableCurrentOptions1 = document.getElementsByClassName('managelib2');
+    disableCurrentOptions1[0].style.display = 'none';
+
+    let disableCurrentOptions2 = document.getElementsByClassName('managelib3');
+    disableCurrentOptions2[0].style.display = 'none';
     
     let enableNewOptions = document.getElementsByClassName('managelib1');
     enableNewOptions[0].style.display = 'flex';
+}
+
+function selectToDeleteLibrarian(){
+    let container = document.getElementsByClassName('container');
+    let selectRadio = document.getElementsByClassName('selectOne');
+    for(let idx = 0; idx < container.length; idx++){
+        let eachContainer = container[idx];
+        eachContainer.style.cursor = 'pointer';
+        eachContainer.style.transition = 'none';
+        eachContainer.addEventListener('mouseover', ()=>{
+            eachContainer.style.transform = 'scale(1.0)';
+        });
+        eachContainer.addEventListener('click', ()=>{
+            selectRadio[idx].checked = true;
+        })
+    }
+    
+    for(let eachRadio of selectRadio){
+        eachRadio.style.cursor = 'pointer';
+        eachRadio.style.display = 'block';
+    }
+    let disableCurrentOptions1 = document.getElementsByClassName('managelib1');
+    disableCurrentOptions1[0].style.display = 'none';
+
+    let disableCurrentOptions2 = document.getElementsByClassName('managelib2');
+    disableCurrentOptions2[0].style.display = 'none';
+    
+    let enableNewOptions = document.getElementsByClassName('managelib3');
+    enableNewOptions[0].style.display = 'flex';
+}
+
+function deleteLibrarian(){
+    let deleteDialog = document.getElementById('delLib');
+    deleteDialog.showModal();
 }
