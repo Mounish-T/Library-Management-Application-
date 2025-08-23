@@ -1,14 +1,33 @@
-let addElement = document.getElementById('addLib');
-addElement.addEventListener('keydown', (event)=>{
-    console.log(event);
+let mode = 'add';
+
+var dialogForm = document.getElementById('libInfo');
+dialogForm.addEventListener('keydown', (event)=>{
+    // console.log(event);
     if(event.key == 'Enter'){
-        console.log("Dad");
-        addLibrarian();
+        event.preventDefault();
+        // console.log("Dad");
+        addOrUpdateLibrarian(mode);
+        // editBack();
+    }
+    else if(event.key == 'Escape'){
+        event.preventDefault();
+        cancelAddLib();
+        editBack();
+    }
+});
+
+window.addEventListener('keydown', (event)=>{
+    if(event.key == 'Escape'){
+        cancelAddLib();
     }
 })
 
-function cancelAddLib(add){
-    let cancel = document.getElementById('cancel');
+var addOrUpdateButton = document.getElementById('addOrUpdateLibButton');
+addOrUpdateButton.addEventListener('click', ()=>{
+    addOrUpdateLibrarian(mode);
+});
+
+function cancelAddLib(){
     let formcontent = document.getElementsByClassName('form-input');
     for(let content of formcontent){
         content.classList.remove('error-input');
@@ -17,15 +36,25 @@ function cancelAddLib(add){
         }   
         else if(content.name != 'pass'){
             content.value = "";
-        }        
+        }     
+        else if(content.name == 'pass'){
+            content.value = 'Welcome@123';
+        }   
         var name = document.getElementById(content.name);
         name.style.display = 'none';
     }
-    if(add) addLib.showModal();
-    else addLib.close();
+    let smallTag = document.getElementsByTagName('small');
+    for(let tag of smallTag){
+        tag.style.display = 'none';
+    }
+    document.getElementById('addOrUpdateLibButton').innerText = 'Add Librarian';
+    mode = 'add';
+    let dialoForm = document.getElementsByClassName('form')[0];
+    dialoForm.close();
+    editBack();
 }
 
-function addLibrarian(){
+function addOrUpdateLibrarian(task){    
     let formcontent = document.getElementsByClassName('form-input');
     let click = false;
     let isSecond = false;
@@ -59,7 +88,6 @@ function addLibrarian(){
             if(content.value == '<Existing user>'){
                 isValid = false;
                 content.classList.add('error-input');
-                console.log(content.classList);
                 var name = document.getElementById(content.name);
                 name.innerHTML = 'User is already registered';
                 name.style.display = 'block';
@@ -92,8 +120,14 @@ function addLibrarian(){
             }
         }
         else if(content.name == 'contact'){
-            console.log(parseInt(content.value == NaN));
-            if(content.value.length == 10 && !Number.isNaN(parseInt(content.value))){
+            let isNaN = false;
+            for(let ch of content.value){
+                if(!(ch >= '0' && ch <= '9')){
+                    isNaN = true;
+                    break;
+                }
+            }
+            if(content.value.length == 10 && !isNaN){
                 content.classList.remove('error-input');
                 var name = document.getElementById(content.name);
                 name.style.display = 'none';
@@ -113,7 +147,7 @@ function addLibrarian(){
         }
     }
     
-    console.log(isValid);
+    // console.log(isValid);
     
     if(!isValid) return;
     let res = new Map();
@@ -127,11 +161,19 @@ function addLibrarian(){
             res.set(content.name, content.value);
         }
     }
-    console.log(res);
-    addLib.close();
+    // console.log(res);
+    // console.log(task);      
+    if(task == 'add'){
+        // Logic for adding data in db
+    }
+    else if(task == 'update'){
+        // Logic for update data in db
+    }
+    cancelAddLib();
+    editBack();
 }
 
-function editLibrarian(){
+function selectToEditLibrarian(){
     let container = document.getElementsByClassName('container');
     let selectRadio = document.getElementsByClassName('selectOne');
     for(let idx = 0; idx < container.length; idx++){
@@ -155,11 +197,18 @@ function editLibrarian(){
     
     let enableNewOptions = document.getElementsByClassName('managelib2');
     enableNewOptions[0].style.display = 'flex';
+}
 
-    let clickEdit = document.getElementById('editbtn');
-    clickEdit.addEventListener('click', ()=>{
-        addElement.showModal();
-    });
+function editLibrarian(){
+    let formcontent = document.getElementsByClassName('form-input');
+    document.getElementById('addOrUpdateLibButton').innerText = 'Update Librarian';
+    mode = 'update';
+    for(let content of formcontent){
+        // Paste the clicked user data to form by getId 'form-content'
+        content.value = 'Hi';
+    }
+    // console.log("Hello");
+    dialogForm.showModal();
 }
 
 function editBack(){

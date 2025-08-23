@@ -102,7 +102,7 @@ span{
     opacity: 0.6;
 }
 
-#addLib, #delLib{
+#libInfo, #delLib{
     align-self: center;
     justify-self: center;
     padding: 20px;
@@ -197,7 +197,7 @@ span{
     justify-content: space-evenly;
 }
 
-#addLibButton, #cancel, #delLibButton{
+#addOrUpdateLibButton, #cancel, #delLibButton{
     /* background-color: coral; */
     padding: 10px;
     border-radius: 25px;
@@ -205,7 +205,7 @@ span{
     cursor: pointer;
 }
 
-#addLibButton, #delLibButton{
+#addOrUpdateLibButton, #delLibButton{
     background-color: greenyellow;
 }
 
@@ -213,11 +213,11 @@ span{
     background-color: orange;
 }
 
-#addLibButton:hover, #cancel:hover, #delLibButton:hover{
+#addOrUpdateLibButton:hover, #cancel:hover, #delLibButton:hover{
     background-color: mediumorchid;
 }
 
-#addLibButton:active, #cancel:active, #delLibButton:active{
+#addOrUpdateLibButton:active, #cancel:active, #delLibButton:active{
     opacity: 0.8;
 }
 

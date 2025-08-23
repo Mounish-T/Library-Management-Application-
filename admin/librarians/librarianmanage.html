@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Manage Librarians</title>
     <script src="https://kit.fontawesome.com/aa8d9a6dd9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="librarianmanage.css">
 </head>
 
-<dialog id="addLib">
+<dialog id="libInfo" class="form">
     <form action="" method="cancelAddLib()" id="form-content">
         <label for="username">Username: </label>
         <div>
@@ -40,8 +40,8 @@
         </div>
     </form>
     <div class="submit">
-        <button id="cancel" onclick="cancelAddLib(false)">Cancel</button>
-        <button id="addLibButton" onclick="addLibrarian()">Add Librarian</button>
+        <button id="cancel" onclick="cancelAddLib()">Cancel</button>
+        <button id="addOrUpdateLibButton">Add Librarian</button>
     </div>
 </dialog>
 
@@ -69,8 +69,9 @@
     <div class="managelib1">
         <h2>Available Librarians</h2>
         <div class="managebtns">
-            <i class="fa-solid fa-add add" onclick="cancelAddLib(true)"></i>
-            <i class="fa-solid fa-pen edit" onclick="editLibrarian()"></i>
+            <!-- <i class="fa-solid fa-add add" onclick="cancelAddLib(true)"></i> -->
+            <i class="fa-solid fa-add add" onclick="document.getElementById('libInfo').showModal()"></i>
+            <i class="fa-solid fa-pen edit" onclick="selectToEditLibrarian()"></i>
             <i class="fa-solid fa-trash delete" onclick="document.getElementById('delLib').showModal()"></i>
         </div>
     </div>
@@ -79,7 +80,7 @@
             <i class="fa-solid fa-arrow-left back"></i>
             <p>Back</p>
         </div>
-        <button id="editbtn">Edit</button>
+        <button id="editbtn" onclick="editLibrarian()">Edit</button>
     </div>
 
     <br>
