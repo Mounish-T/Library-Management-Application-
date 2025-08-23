@@ -1,32 +1,32 @@
 let mode = 'add';
 
-var dialogForm = document.getElementById('libInfo');
+var dialogForm = document.getElementById('memInfo');
 dialogForm.addEventListener('keydown', (event)=>{
     // console.log(event);
     if(event.key == 'Enter'){
         event.preventDefault();
-        addOrUpdateLibrarian(mode);
+        addOrUpdateMember(mode);
     }
     else if(event.key == 'Escape'){
         event.preventDefault();
-        cancelAddLib();
+        cancelAddMem();
         editOrDeleteBack();
     }
 });
 
 window.addEventListener('keydown', (event)=>{
     if(event.key == 'Escape'){
-        cancelAddLib();
+        cancelAddMem();
         editOrDeleteBack();
     }
 })
 
-var addOrUpdateButton = document.getElementById('addOrUpdateLibButton');
+var addOrUpdateButton = document.getElementById('addOrUpdateMemButton');
 addOrUpdateButton.addEventListener('click', ()=>{
-    addOrUpdateLibrarian(mode);
+    addOrUpdateMember(mode);
 });
 
-function cancelAddLib(){
+function cancelAddMem(){
     let formcontent = document.getElementsByClassName('form-input');
     for(let content of formcontent){
         content.classList.remove('error-input');
@@ -46,16 +46,16 @@ function cancelAddLib(){
     for(let tag of smallTag){
         tag.style.display = 'none';
     }
-    document.getElementById('addOrUpdateLibButton').innerText = 'Add Librarian';
+    document.getElementById('addOrUpdateMemButton').innerText = 'Add Members';
     mode = 'add';
     let dialogForm = document.getElementsByClassName('form')[0];
     dialogForm.close();
-    let deleteDialog = document.getElementById('delLib');
+    let deleteDialog = document.getElementById('delMem');
     deleteDialog.close();
     editOrDeleteBack();
 }
 
-function addOrUpdateLibrarian(task){    
+function addOrUpdateMember(task){    
     let formcontent = document.getElementsByClassName('form-input');
     let click = false;
     let isSecond = false;
@@ -170,11 +170,11 @@ function addOrUpdateLibrarian(task){
     else if(task == 'update'){
         // Logic for update data in db
     }
-    cancelAddLib();
+    cancelAddMem();
     editOrDeleteBack();
 }
 
-function selectToEditLibrarian(){
+function selectToEditMember(){
     let container = document.getElementsByClassName('container');
     let selectRadio = document.getElementsByClassName('selectOne');
     for(let idx = 0; idx < container.length; idx++){
@@ -193,18 +193,18 @@ function selectToEditLibrarian(){
         eachRadio.style.cursor = 'pointer';
         eachRadio.style.display = 'block';
     }
-    let disableCurrentOptions1 = document.getElementsByClassName('managelib1');
+    let disableCurrentOptions1 = document.getElementsByClassName('managemem1');
     disableCurrentOptions1[0].style.display = 'none';
-    let disableCurrentOptions2 = document.getElementsByClassName('managelib3');
+    let disableCurrentOptions2 = document.getElementsByClassName('managemem3');
     disableCurrentOptions2[0].style.display = 'none';
     
-    let enableNewOptions = document.getElementsByClassName('managelib2');
+    let enableNewOptions = document.getElementsByClassName('managemem2');
     enableNewOptions[0].style.display = 'flex';
 }
 
-function editLibrarian(){
+function editMember(){
     let formcontent = document.getElementsByClassName('form-input');
-    document.getElementById('addOrUpdateLibButton').innerText = 'Update Librarian';
+    document.getElementById('addOrUpdateMemButton').innerText = 'Update Member';
     mode = 'update';
     for(let content of formcontent){
         // Paste the clicked user data to form by getId 'form-content'
@@ -230,17 +230,17 @@ function editOrDeleteBack(){
         eachRadio.style.display = 'none';
         eachRadio.checked = false;
     }
-    let disableCurrentOptions1 = document.getElementsByClassName('managelib2');
+    let disableCurrentOptions1 = document.getElementsByClassName('managemem2');
     disableCurrentOptions1[0].style.display = 'none';
 
-    let disableCurrentOptions2 = document.getElementsByClassName('managelib3');
+    let disableCurrentOptions2 = document.getElementsByClassName('managemem3');
     disableCurrentOptions2[0].style.display = 'none';
     
-    let enableNewOptions = document.getElementsByClassName('managelib1');
+    let enableNewOptions = document.getElementsByClassName('managemem1');
     enableNewOptions[0].style.display = 'flex';
 }
 
-function selectToDeleteLibrarian(){
+function selectToDeleteMember(){
     let container = document.getElementsByClassName('container');
     let selectRadio = document.getElementsByClassName('selectOne');
     for(let idx = 0; idx < container.length; idx++){
@@ -259,23 +259,23 @@ function selectToDeleteLibrarian(){
         eachRadio.style.cursor = 'pointer';
         eachRadio.style.display = 'block';
     }
-    let disableCurrentOptions1 = document.getElementsByClassName('managelib1');
+    let disableCurrentOptions1 = document.getElementsByClassName('managemem1');
     disableCurrentOptions1[0].style.display = 'none';
 
-    let disableCurrentOptions2 = document.getElementsByClassName('managelib2');
+    let disableCurrentOptions2 = document.getElementsByClassName('managemem2');
     disableCurrentOptions2[0].style.display = 'none';
     
-    let enableNewOptions = document.getElementsByClassName('managelib3');
+    let enableNewOptions = document.getElementsByClassName('managemem3');
     enableNewOptions[0].style.display = 'flex';
 }
 
-function deleteLibrarian(){
-    let deleteDialog = document.getElementById('delLib');
+function deleteMember(){
+    let deleteDialog = document.getElementById('delMem');
     deleteDialog.showModal();
 }
 
-function submitDeleteLibrarian(){
-    // Logic for delete librarian to db
-    cancelAddLib();
+function submitDeleteMember(){
+    // Logic for delete the member to db
+    cancelAddMem();
     editOrDeleteBack();
 }

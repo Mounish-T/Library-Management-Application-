@@ -7,6 +7,7 @@ body{
     background-image: url("../assets/download.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .nav{
@@ -31,4 +32,249 @@ h3{
 
 span{
     color: rgb(255, 0, 149);
+}
+
+.searchBar{
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    border-radius: 50px;
+    margin: 10px;
+    width: 65%;
+}
+
+.search{
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.searchBar:focus-within{
+    border: 3px solid rgb(255, 0, 149);
+}
+
+.filter{
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* .displayLibrarians{
+    justify-items: center;
+    padding: 25px;
+} */
+
+.managemem1{
+    background-color: darkkhaki;
+    display: flex;
+    justify-content: space-between;
+    /* color: rgb(255, 4, 4); */
+    padding: 1px;
+}
+
+.managemem1 h2{
+    color: rgb(255, 4, 4);
+    padding: 10px;
+}
+
+
+.add, .edit, .delete{
+    margin: 5px 9px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+}
+
+.add:hover, .edit:hover, .delete:hover{
+    transform: scale(1.2);
+    border-color: cadetblue;
+    background-color: chocolate;
+}
+
+.add:active, .edit:active, .delete:active{
+    opacity: 0.6;
+}
+
+#memInfo, #delMem{
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+    background-color: wheat;
+}
+
+.managemem2, .managemem3{
+    display: none;
+    justify-content: space-between;
+    background-color: darkkhaki;
+    padding: 1px;
+}
+
+.managemem2 p, .managemem3 p{
+    display: inline;
+}
+
+.arrow-back{
+    margin: 10px 10px 10px 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: hotpink;
+}
+
+.arrow-back:hover{
+    background-color: darkgray;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.arrow-back:active{
+    opacity: 0.8;
+}
+
+#editbtn, #deletebtn{
+    margin: 10px 10px 10px 0px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: rgb(232, 178, 52);
+}
+
+#editbtn:hover, #deletebtn:hover{
+    transform: scale(1.1);
+    /* border-color: cadetblue; */
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+#editbtn:active, #deletebtn:active{
+    opacity: 0.8;
+}
+
+#form-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#form-content *{
+    padding: 5px;
+    /* margin: 5px; */
+}
+
+#form-content small{
+    display: none;
+    /* margin-top: 20px; */
+}
+
+#form-content input{
+    /* padding: 10px; */
+    font-style: italic;
+    border: 2px solid;
+    border-radius: 10px;
+    display: block;
+}
+
+#form-content .gender input{
+    display: inline;
+}
+
+#username, #email, #pass, #gender, #contact{
+    display: none;
+    color: red;
+}
+
+.submit{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#addOrUpdateMemButton, #cancel, #delMemButton{
+    /* background-color: coral; */
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#addOrUpdateMemButton, #delMemButton{
+    background-color: greenyellow;
+}
+
+#cancel{
+    background-color: orange;
+}
+
+#addOrUpdateMemButton:hover, #cancel:hover, #delMemButton:hover{
+    background-color: mediumorchid;
+}
+
+#addOrUpdateMemButton:active, #cancel:active, #delMemButton:active{
+    opacity: 0.8;
+}
+
+.resBtn{
+    padding: 10px;
+}
+
+#delMem h3{
+    font-size: 20px;
+}
+
+#delMem .resBtn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.displayMembers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px;
+    justify-content: space-around;
+}
+
+.container{
+    position: relative;
+    border-radius: 20px;
+    background-color: lightblue;
+    transition: transform 0.3s ease;
+}
+
+.container span{
+    color: blue;
+    /* padding: 0; */
+}
+
+.container:hover{
+    transform: scale(1.1);
+}
+
+.selectOne {
+    position: relative;
+    top: 10px;
+    left: 2px;
+    display: none;
+    transform: scale(1.8);
+}
+
+.error-input{
+    border: 2px solid red !important;
+    border-radius: 10px !important;
+}
+
+table, td, th{
+    padding: 25px;
+    font-size: 20px;
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: aqua;
 }
