@@ -26,6 +26,15 @@ addOrUpdateButton.addEventListener('click', ()=>{
     addOrUpdateMember(mode);
 });
 
+let deleteDialog = document.getElementById('delMem');
+deleteDialog.addEventListener('keydown', (event)=>{
+    if(event.key == 'Enter'){
+        event.preventDefault();
+        deleteDialog.close();
+        submitDeleteMember();
+    }
+});
+
 function cancelAddMem(){
     let formcontent = document.getElementsByClassName('form-input');
     for(let content of formcontent){
