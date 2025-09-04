@@ -41,7 +41,13 @@ function newUser() {
         mailElement.classList.remove("error-input");
         alert("Success");
         window.location.href = "admin/home/home.html";
-    } 
+    }
+    else if (mailElement.value == 'librarian@gmail.com'){
+        errorMsg.style.display = 'none';
+        mailElement.classList.remove('error-input');
+        alert("Success");
+        window.location.href = 'Librarian/home/home.html';
+    }
     else {
         errorMsg.innerText = "Email not recognized!";
         errorMsg.style.display = "block";
