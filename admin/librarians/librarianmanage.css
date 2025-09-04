@@ -234,7 +234,7 @@ span{
     justify-content: space-evenly;
 }
 
-.displayLibrarians  {
+.displayLibrarians{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;

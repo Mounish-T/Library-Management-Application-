@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book</title>
+    <script src="https://kit.fontawesome.com/aa8d9a6dd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="issuebook.css">
+</head>
+
+<dialog id="createDialog">
+    <form id="form-content">
+        <label for="">ISBN: </label>
+        <div>
+            <input type="text" required>
+            <small>ISBN can't be Empty</small>
+        </div>
+        <label for="">BookName: </label>
+        <div class="eyeOptions">
+            <input type="text" value="Enter ISBN" disabled>
+            <span>
+                <i class="fa-solid fa-eye" id="book-eye"></i>
+                <p id="book-hint">View Book</p>
+            </span>
+            <!-- <small>BookName can't be Empty</small> -->
+        </div>
+        <label for="">UserId: </label>
+        <div>
+            <input type="text" required>
+            <small>UserId can't be Empty</small>
+        </div>
+        <label for="">UserName: </label>
+        <div class="eyeOptions">
+            <input type="text" value="Enter User ID" disabled>
+            <span>
+                <i class="fa-solid fa-eye" id="user-eye"></i>
+                <p id="user-hint">View User</p>
+            </span>
+            <!-- <small>UserName can't be Empty</small> -->
+        </div>
+        <label for="">Issue Date: </label>
+        <div>
+            <input type="date" required>
+            <small>Issue Date can't be Empty</small>
+        </div>
+        <label for="">No. of Days: </label>
+        <div>
+            <input type="number" required>
+            <small>Days can't be Empty</small>
+        </div>
+        <label for="">Due Date: </label>
+        <div>
+            <input type="date" disabled>
+            <!-- <small>Due Date can't be Empty</small> -->
+        </div>
+    </form>
+    <div class="submit">
+        <button id="cancel">Cancel</button>
+        <button id="issue">Issue Book</button>
+    </div>
+</dialog>
+
+<body>
+    <div class="nav">
+        <div class="heading">   
+            <h1>Library Management System</h1>
+            <div class="actions">
+                <h3>Welcome, <span>User</span></h3>
+                <i class="fa-solid fa-circle-user userIcon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sub-header">
+        <h2 class="available-text">Available Requests</h2>
+        <button id="createReq">Create New</button>
+    </div>
+    <div class="availableRequest">
+        <div class="request">
+            <h3><span>UserId: </span>1234567</h3>
+            <h3><span>UserName: </span>Mounish</h3>
+            <h3><span>BookName: </span>DSA</h3>
+            <h3><span>Author: </span>Sathish</h3>
+            <div class="view">
+                <button id="viewBook">View Book</button>
+                <button id="viewUser">View User</button>
+                <button id="proceed">Proceed</button>
+            </div>
+        </div>
+    </div>
+    <script src="issuebook.js"></script>
+</body>
+</html>

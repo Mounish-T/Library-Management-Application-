@@ -11,7 +11,6 @@ body{
 
 .nav{
     background-color: wheat;
-    /* background-color: rgb(157, 255, 250);; */
     padding: 20px;
 }
 
@@ -37,26 +36,49 @@ span{
     text-align: center;
 }
 
-.search{
-    margin: 10px;
-    padding: 10px;
-    padding-right: 0px;
-    margin-right: 0px;
-    border: 3px solid wheat;
-    border-radius: 50px 0px 0px 50px;
-    width: 65%;
+.nav-btn{
+    padding: 25px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: large;
 }
 
-.search:focus{
-    border: 3px, solid, rgb(238, 20, 180);
-    outline: none;
+a{
+    text-decoration: none;
 }
-.filter{
-    color: wheat;
-    font-size: 25px;
-    padding: 5px 0px 12px 0px;
-    border-left: none;
-    /* background-color: whitesmoke; */
+
+.lists{
+    display: flex;
+    justify-content: space-around;
+}
+
+#issue:hover, #return:hover, #renew:hover, #reservations:hover, #fines:hover{
+    background-color: cadetblue;
+}
+
+#issue:active, #return:active, #renew:active, #reservations:active, #fines:active{
+    background-color: lightsalmon;
+}
+
+#issue{
+    background-color: green;
+}
+
+#return{
+    background-color: brown;
+}
+
+#renew{
+    background-color: darkslategrey;
+}
+
+#reservations{
+    background-color: darkgoldenrod;
+}
+
+#fines{
+    background-color: gray;
 }
 
 .searchBar{
@@ -69,7 +91,7 @@ span{
     width: 65%;
 }
 
-.searchh{
+.search{
     padding: 10px;
     width: 100%;
     font-size: 15px;
@@ -77,10 +99,15 @@ span{
     border: none;
 }
 
-.searchh:focus{
+.search:focus{
     outline: none;
 }
-.filterr{
+
+.searchBar:focus-within{
+    border: 3px solid rgb(255, 0, 149);
+}
+
+.filter{
     font-size: 20px;
     margin: 10px;
 }
