@@ -80,6 +80,12 @@ span{
 
 #form-content small{
     display: none;
+    color: red;
+}
+
+.error-input{
+    border: 2px solid red !important;
+    border-radius: 10px !important;
 }
 
 #form-content input{
@@ -125,7 +131,7 @@ span{
     top: 33.8%;
 }
 
-#issue, #cancel{
+#issue, #requestCancel{
     padding: 10px;
     border-radius: 25px;
     font-size: 15px;
@@ -137,15 +143,15 @@ span{
     background-color: rgb(69, 238, 50);
 }
 
-#cancel{
+#requestCancel{
     background-color: orange;
 }
 
-#issue:hover, #cancel:hover{
+#issue:hover, #requestCancel:hover{
     background-color: mediumorchid;
 }
 
-#issue:active, #cancel:active{
+#issue:active, #requestCancel:active{
     opacity: 0.8;
 }
 

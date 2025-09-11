@@ -12,46 +12,46 @@
     <form id="form-content">
         <label for="">ISBN: </label>
         <div>
-            <input type="text" class="form-input" name="bookId" required>
-            <small>ISBN can't be Empty</small>
+            <input type="text" id="input-bookId" class="form-input" name="bookId" required>
+            <small id="bookId">ISBN can't be Empty</small>
         </div>
         <label for="">BookName: </label>
         <div class="eyeOptions">
-            <input type="text" class="form-input" name="bookName" value="Enter ISBN" disabled>
+            <input type="text" class="form-input" id="input-bookName" name="bookName" value="Enter ISBN" disabled>
             <span>
                 <i class="fa-solid fa-eye" id="book-eye"></i>
                 <p id="book-hint">View Book</p>
             </span>
-            <!-- <small>BookName can't be Empty</small> -->
+            <small id="bookName">BookName can't be Empty</small>
         </div>
         <label for="">UserId: </label>
         <div>
-            <input type="text" class="form-input" name="userId" required>
-            <small>UserId can't be Empty</small>
+            <input type="text" id="input-userId" class="form-input" name="userId" required>
+            <small id="userId">UserId can't be Empty</small>
         </div>
         <label for="">UserName: </label>
         <div class="eyeOptions">
-            <input type="text" class="form-input" name="userName" value="Enter User ID" disabled>
+            <input type="text" id="input-username" class="form-input" name="username" value="Enter User ID" disabled>
             <span>
                 <i class="fa-solid fa-eye" id="user-eye"></i>
                 <p id="user-hint">View User</p>
             </span>
-            <!-- <small>UserName can't be Empty</small> -->
+            <small id="username">UserName can't be Empty</small>
         </div>
         <label for="">Issue Date: </label>
         <div>
-            <input type="date" class="form-input" name="issueDate" required>
-            <small>Issue Date can't be Empty</small>
+            <input type="date" id="input-issueDate" class="form-input" name="issueDate" required>
+            <small id="issueDate">Issue Date can't be Empty</small>
         </div>
         <label for="">No. of Days: </label>
         <div>
-            <input type="number" class="form-input" name="days" required>
-            <small>Days can't be Empty</small>
+            <input type="number" id="input-dueDays" class="form-input" name="dueDays" required>
+            <small id="dueDays">Days can't be Empty</small>
         </div>
         <label for="">Due Date: </label>
         <div>
-            <input type="date" class="form-input" name="dueDate" disabled>
-            <!-- <small>Due Date can't be Empty</small> -->
+            <input type="date" id="input-dueDate" class="form-input" name="dueDate" disabled>
+            <small id="dueDate">Due Date can't be Empty</small>
         </div>
     </form>
     <div class="submit">
