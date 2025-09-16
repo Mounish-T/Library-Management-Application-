@@ -8,6 +8,58 @@
     <link rel="stylesheet" href="issuebook.css">
 </head>
 
+<dialog id="viewBookDialog">
+    <div class="bookDetails">
+        <div class="bookImage">
+            <img src="../../assets/download.jpg" alt="Book Image">
+        </div>
+        <div class="book-properites">
+            <table>
+                <tr>
+                    <td>ISBN</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>Novels</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>English</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Author</td>
+                    <td>Sathish</td>
+                </tr>
+                <tr>
+                    <td>Published Year</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Edition</td>
+                    <td>4<sup>th</sup></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Publisher</td>
+                    <td>Sura</td>
+                </tr>
+                <tr>
+                    <td>Total Copies</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Available Copies</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</dialog>
+
 <dialog id="createDialog">
     <form id="form-content">
         <label for="">ISBN: </label>
@@ -17,12 +69,12 @@
         </div>
         <label for="">BookName: </label>
         <div class="eyeOptions">
-            <input type="text" class="form-input" id="input-bookName" name="bookName" value="Enter ISBN" disabled>
+            <input type="text" class="form-input" id="input-bookName" name="bookName" placeholder="Enter ISBN" disabled>
             <span>
                 <i class="fa-solid fa-eye" id="book-eye"></i>
                 <p id="book-hint">View Book</p>
             </span>
-            <small id="bookName">BookName can't be Empty</small>
+            <!-- <small id="bookName">BookName can't be Empty</small> -->
         </div>
         <label for="">UserId: </label>
         <div>
@@ -31,12 +83,12 @@
         </div>
         <label for="">UserName: </label>
         <div class="eyeOptions">
-            <input type="text" id="input-username" class="form-input" name="username" value="Enter User ID" disabled>
+            <input type="text" id="input-username" class="form-input" name="username" placeholder="Enter User ID" disabled>
             <span>
                 <i class="fa-solid fa-eye" id="user-eye"></i>
                 <p id="user-hint">View User</p>
             </span>
-            <small id="username">UserName can't be Empty</small>
+            <!-- <small id="username">UserName can't be Empty</small> -->
         </div>
         <label for="">Issue Date: </label>
         <div>
@@ -51,7 +103,7 @@
         <label for="">Due Date: </label>
         <div>
             <input type="date" id="input-dueDate" class="form-input" name="dueDate" disabled>
-            <small id="dueDate">Due Date can't be Empty</small>
+            <!-- <small id="dueDate">Due Date can't be Empty</small> -->
         </div>
     </form>
     <div class="submit">

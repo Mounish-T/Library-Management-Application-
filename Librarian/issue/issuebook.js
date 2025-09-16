@@ -227,6 +227,20 @@ let availableUsers = [
         email: "gowrishankar@gmail.com",
         gender: "male",
         contact: "1234567890",
+    },
+    {
+        userId: "sit22ec048",
+        username: "Shailesh Muruga",
+        email: "shailesh@gmail.com",
+        gender: "male",
+        contact: "1234567890",
+    },
+    {
+        userId: "sit22ec108",
+        username: "Surepalli Nagarjuna",
+        email: "nagu@gmail.com",
+        gender: "male",
+        contact: "1234567890",
     }
 ];
 
@@ -275,19 +289,29 @@ bookId.addEventListener('keydown', (event)=>{
         if(isValidBookId){
             let matchBook;
             availableBooks.forEach((book)=>{
-                if(book.bookId === bookId.value){
+                if(book.bookId === bookId.value.trim()){
                     matchBook = book;
+                    bookName.classList.remove('error-input');
                 }
             });
-            console.log(matchBook);
+            // console.log(matchBook);
             
             if(!matchBook){
                 bookId.value = '';
-                bookName.value = 'Enter ISBN ID';
-                alert("ISBN Id not found");
+                bookName.value = '';
+                validation(bookId);
+                let bookIdSmallTag = document.getElementById("bookId");
+                bookIdSmallTag.innerText = 'Book not found';
+                // alert("ISBN Id not found");
                 return;
             }
             bookName.value = matchBook.bookName;
+        }
+        else{
+            let bookIdSmallTag = document.getElementById("bookId");
+            bookIdSmallTag.innerText = "Book Id can't be Empty";
+            bookName.value = '';
+            bookName.classList.add('error-input');
         }
     }
 });
@@ -300,16 +324,26 @@ userId.addEventListener('keydown', (event)=>{
             availableUsers.forEach((user)=>{
                 if(user.userId === userId.value.trim().toLowerCase()){
                     matchUser = user;
+                    username.classList.remove('error-input');
                 }
-            })
-            console.log(matchUser);
+            });
+            // console.log(matchUser);
             if(!matchUser){
                 userId.value = '';
-                username.value = 'Enter User ID';
-                alert("User not found");
+                username.value = '';
+                validation(userId);
+                let userIdSmallTag = document.getElementById("userId");
+                userIdSmallTag.innerText = 'User not found';
+                // alert("User not found");
                 return;
             }
             username.value = matchUser.username;
+        }
+        else{
+            let userIdSmallTag = document.getElementById('userId');
+            userIdSmallTag.innerText = "User Id can't be Empty";
+            username.value = '';
+            username.classList.add('error-input');
         }
     }
 });
@@ -329,8 +363,13 @@ duedays.addEventListener('keydown', (event)=>{
             
             const formattedDate = dateToString(currentDate);
             dueDate.value = formattedDate;
-            validation(dueDate);
-
+            dueDate.classList.remove('error-input');
+        }
+        else{
+            let dueDaysSmallTag = document.getElementById('dueDays');
+            dueDaysSmallTag.innerText = "Days can't be Empty";
+            dueDate.value = '';
+            dueDate.classList.add('error-input');
         }
     }
 });
@@ -385,20 +424,126 @@ issueListener.addEventListener('click', ()=>{
     let formcontent = document.getElementsByClassName('form-input');
     // validation
     let isValid = true;
+    let enteredBookId, enteredBookName;
+    let enteredUserId, enteredUserName;
+    let enteredIssueDate, enteredDueDays, enteredDueDate;
     for(let content of formcontent){
         if(content.value.trim() === ''){
             isValid = false;
             content.value = '';
             content.classList.add('error-input');
-            let errorTag = document.getElementById(content.name);
-            errorTag.style.display = 'block';
+            if(content.name != 'username' && content.name != 'bookName' && content.name != 'dueDate'){
+                let errorTag = document.getElementById(content.name);
+                errorTag.style.display = 'block';
+            }
         }
         else{
             content.classList.remove('error-input');
-            let errorTag = document.getElementById(content.name);
-            errorTag.style.display = 'none';
+            if(content.name != 'username' && content.name != 'bookName' && content.name != 'dueDate'){
+                let errorTag = document.getElementById(content.name);
+                errorTag.style.display = 'none';
+            }
+            if(content.name == 'bookId'){
+                enteredBookId = content.value;
+            }
+            else if(content.name == 'bookName'){
+                enteredBookName = content.value;
+            }
+            else if(content.name == 'userId'){
+                enteredUserId = content.value;
+            }
+            else if(content.name == 'username'){
+                enteredUserName = content.value;
+            }
+            else if(content.name == 'issueDate'){
+                enteredIssueDate = content.value;
+            }
+            else if(content.name == 'dueDays'){
+                enteredDueDays = content.value;
+            }
+            else if(content.name == 'dueDate'){
+                enteredDueDate = content.value;
+            }
         }
     }
+
+    if(isValid){
+        let matchBook;
+        availableBooks.forEach((book)=>{
+            if(book.bookId === enteredBookId.trim()){
+                matchBook = book;
+                return;
+            }
+        });
+
+        if(!matchBook || matchBook.bookName != enteredBookName){
+            isValid = false;
+            bookId.value = '';
+            bookName.value = '';
+            validation(bookId);
+            let bookIdSmallTag = document.getElementById("bookId");
+            bookIdSmallTag.innerText = 'Book not found';
+            bookName.value = '';
+            bookName.classList.add('error-input');
+        }
+        else{
+            isValid = true;
+            bookName.classList.remove('error-input');
+        }
+
+        if(!isValid) return;
+
+        let matchUser;
+        availableUsers.forEach((user)=>{
+            if(user.userId === enteredUserId.trim().toLowerCase()){
+                matchUser = user;
+                return;
+            }
+        });
+        
+        if(!matchUser || matchUser.username != enteredUserName){
+            isValid = false;
+            let uid = document.getElementById('input-userId');
+            uid.value = '';
+            username.value = '';
+            validation(uid);
+            let userIdSmallTag = document.getElementById("userId");
+            userIdSmallTag.innerText = 'User not found';
+            username.classList.add('error-input');
+        }
+        else{
+            isValid = true;
+            username.classList.remove('error-input');
+        }
+
+        if(!isValid) return;
+
+        // console.log(enteredIssueDate);
+        
+        let dateSplit = enteredIssueDate.split('-');
+        let currentDate = StringToDate(dateSplit);
+
+        let days = parseInt(enteredDueDays);
+        currentDate.setDate(currentDate.getDate() + days);
+        
+        const formattedDate = dateToString(currentDate);
+        // console.log(formattedDate + " " + enteredDueDate);
+        
+        if(formattedDate != enteredDueDate){
+            isValid = false;
+            duedays.value = '';
+            dueDate.value = '';
+            validation(duedays);
+            let dueDaysSmallTag = document.getElementById('dueDays');
+            dueDaysSmallTag.innerText = 'Invalid Date';
+            dueDate.classList.add('error-input');
+        }
+        else{
+            isValid = true;
+            dueDate.classList.remove('error-input');
+        }
+    }
+
 
     if(!isValid) return;
 
@@ -427,11 +572,11 @@ issueListener.addEventListener('click', ()=>{
 });
 
 const proceedElement = document.querySelectorAll('#proceed');
-console.log(proceedElement);
+// console.log(proceedElement);
 proceedElement.forEach((element) => {
     element.addEventListener('click', ()=>{
         const reqId = element.getAttribute('data-id');
-        console.log(reqId);
+        // console.log(reqId);
         confirmRequest(reqId);
     })
 });
@@ -503,17 +648,26 @@ function clearDialogValues(){
     for(let content of formcontent){
         
         content.classList.remove('error-input');
-        let errorTag = document.getElementById(content.name);
-        errorTag.style.display = 'none';
+        if(content.name != 'username' && content.name != 'bookName' && content.name != 'dueDate'){
+            let errorTag = document.getElementById(content.name);
+            errorTag.style.display = 'none';
+        }
 
         if(content.name == 'bookName'){
-            content.value = 'Enter ISBN';
+            content.value = '';
         }
         else if(content.name == 'username'){
-            content.value = 'Enter User ID';
+            content.value = '';
         }
         else{
             content.value = '';
         }
     }
 }
+
+const bookListener = document.getElementById('book-hint');
+bookListener.addEventListener('click', ()=>{
+    console.log("DA");
+    
+    document.getElementById('viewBookDialog').showModal();
+});
